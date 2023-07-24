@@ -8,7 +8,11 @@ const actorsDetails=actors.map((actor,index)=>{
     <div key={index}>
       <p>{actor.name}</p>
       <ul>
-        <li>{actor.movies}</li>
+        {actor.movies.map((genre)=>{
+          return (
+          <li key={genre}>{genre}</li>)
+        })
+      }
       </ul>
     </div>
   )
