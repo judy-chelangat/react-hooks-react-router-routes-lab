@@ -4,7 +4,7 @@ import { directors } from "../data";
 
 const directorsDetails=directors.map((director)=>{
   return (
-    <div>
+    <div key={director.name}>
       <p>{director.name}</p>
       <ul>
         <li>{director.movies}</li>
@@ -15,10 +15,10 @@ const directorsDetails=directors.map((director)=>{
 })
     function Directors() {
       return(
-          <>
+          <div>
             <h1>Directors Page</h1>
             {directorsDetails}
-            </>
+            </div>
         )
     }
 
